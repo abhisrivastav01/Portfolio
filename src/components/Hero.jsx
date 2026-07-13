@@ -73,7 +73,7 @@ function Hero() {
             </p>
 
             {/* BUTTONS */}
-            <div className="flex flex-wrap gap-21 mt-10 mb-14">
+            <div className="flex flex-wrap gap-5 mt-10 mb-14">
 
               <a
                 href="/resume.pdf"

@@ -11,18 +11,19 @@ function Navbar() {
       left-0
       w-full
       z-50
-      bg-slate-950/80
+      bg-slate-950/90
       backdrop-blur-lg
       border-b
       border-slate-800
       "
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 lg:px-12">
 
-        <div className="flex justify-center items-center h-20">
+        {/* Navbar Height Reduced */}
+        <div className="flex justify-center items-center h-11">
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-12">
+          <div className="hidden md:flex items-center gap-10">
 
             <a
               href="#home"
@@ -63,7 +64,7 @@ function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white text-3xl absolute right-6"
+            className="md:hidden text-white text-2xl absolute right-4"
             onClick={() => setIsOpen(!isOpen)}
           >
             ☰
@@ -73,11 +74,22 @@ function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden pb-6 flex flex-col items-center gap-4">
-
+          <div
+            className="
+            md:hidden
+            py-4
+            flex
+            flex-col
+            items-center
+            gap-4
+            bg-slate-950
+            border-t
+            border-slate-800
+            "
+          >
             <a
               href="#home"
-              className="text-slate-300"
+              className="text-slate-300 hover:text-cyan-400"
               onClick={() => setIsOpen(false)}
             >
               Home
@@ -85,7 +97,7 @@ function Navbar() {
 
             <a
               href="#about"
-              className="text-slate-300"
+              className="text-slate-300 hover:text-cyan-400"
               onClick={() => setIsOpen(false)}
             >
               About
@@ -93,7 +105,7 @@ function Navbar() {
 
             <a
               href="#skills"
-              className="text-slate-300"
+              className="text-slate-300 hover:text-cyan-400"
               onClick={() => setIsOpen(false)}
             >
               Skills
@@ -101,7 +113,7 @@ function Navbar() {
 
             <a
               href="#projects"
-              className="text-slate-300"
+              className="text-slate-300 hover:text-cyan-400"
               onClick={() => setIsOpen(false)}
             >
               Projects
@@ -109,12 +121,11 @@ function Navbar() {
 
             <a
               href="#contact"
-              className="text-slate-300"
+              className="text-slate-300 hover:text-cyan-400"
               onClick={() => setIsOpen(false)}
             >
               Contact
             </a>
-
           </div>
         )}
 
